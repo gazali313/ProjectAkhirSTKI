@@ -1,27 +1,4 @@
-# Sistem Rekomendasi Film - Aldy Muardi
-## Domain Proyek
-### Latar Belakang
-
-Dalam era digital yang semakin maju, _platform_ hiburan seperti layanan _streaming_ film dan serial TV telah menjadi sangat populer. Pengguna sekarang memiliki akses ke ribuan film dari berbagai genre, tahun rilis, dan negara. Namun, dengan keberagaman konten yang luas, muncul masalah kelebihan pilihan yang dapat membuat pengguna bingung atau bahkan mengabaikan beberapa film yang mungkin sesuai dengan preferensi mereka. Dalam menghadapi tantangan ini, pengembang _platform_ hiburan telah mengadopsi sistem rekomendasi film yang canggih. 
-
-Sistem rekomendasi film adalah teknologi cerdas yang digunakan oleh platform hiburan untuk memberikan rekomendasi film yang relevan dan menarik kepada pengguna. Tujuannya adalah untuk membantu pengguna menemukan film-film yang sesuai dengan preferensi dan minat mereka, mengatasi masalah kelebihan pilihan, dan meningkatkan pengalaman pengguna secara keseluruhan. Sebuah sistem rekomendasi film biasanya didasarkan pada teknik-teknik pengolahan data dan kecerdasan buatan yang kompleks. Data merupakan komponen kunci dalam sistem ini, dan platform hiburan mengumpulkan beragam informasi, termasuk riwayat penonton, peringkat film, preferensi, ulasan, dan interaksi pengguna sebelumnya dengan konten. Informasi ini dianalisis secara mendalam untuk memahami pola perilaku pengguna dan memprediksi film-film yang mungkin diminati.
-
-![WhatsApp Image 2023-07-30 at 12 45 01](https://github.com/aldymuardi/Sistem-Rekomendasi-Film/assets/79571450/8f694a33-ccf7-45f3-a689-b6bb31d5c1f4)
-
-Gambar 1. Ilustrasi Sistem Rekomendasi Film
-
-
-Ada beberapa pendekatan yang dapat digunakan dalam mengembangkan sistem rekomendasi film. Salah satunya adalah pendekatan berbasis konten, di mana film-film dianalisis berdasarkan atribut-atribut mereka, seperti genre, aktor, sutradara, plot, dan bahasa. Jika seorang pengguna menyukai film-film dengan genre petualangan dan aktor tertentu, sistem akan merekomendasikan film-film dengan ciri-ciri serupa. Selain itu, ada juga pendekatan berbasis kolaboratif, yang memanfaatkan pola kesamaan antara pengguna. Dalam pendekatan ini, sistem mencari pengguna dengan preferensi serupa dan menggunakan data mereka untuk merekomendasikan film kepada pengguna lain dengan minat yang mirip. Misalnya, jika dua pengguna dengan minat film yang hampir sama memberikan peringkat yang tinggi pada film tertentu, sistem dapat merekomendasikan film tersebut kepada pengguna lain yang memiliki minat yang serupa. Sistem rekomendasi film juga dapat memanfaatkan teknik pembelajaran mesin dan algoritma terbaru. Algoritma ini terus ditingkatkan melalui pembelajaran dari data baru, sehingga sistem dapat menyediakan rekomendasi yang semakin akurat seiring berjalannya waktu.
-
-Kegunaan sistem rekomendasi film tidak hanya menguntungkan bagi pengguna, tetapi juga bagi _platform_ hiburan itu sendiri. Dengan memberikan rekomendasi yang relevan, _platform_ dapat meningkatkan retensi pengguna, meningkatkan waktu tayang, dan mendorong interaksi lebih lanjut dengan konten mereka. Selain itu, data yang dikumpulkan dari interaksi pengguna dengan sistem rekomendasi dapat membantu _platform_ dalam memahami tren dan preferensi pengguna yang sedang berlangsung, sehingga mereka dapat menghadirkan konten baru yang sesuai dengan permintaan pasar.
-
-## _Business Understanding_
-Dalam era modern, di mana _platform_ hiburan berbasis streaming telah mengambil alih preferensi penonton, sistem rekomendasi film menjadi kunci untuk mengatasi tantangan kelebihan pilihan dan meningkatkan pengalaman pengguna.
-
-Dengan beragamnya film yang tersedia, pengguna seringkali merasa kewalahan dan bingung dalam memilih konten yang sesuai dengan selera mereka. Sistem rekomendasi film hadir untuk menyelesaikan masalah ini dengan memberikan rekomendasi yang dipersonalisasi berdasarkan pola perilaku dan preferensi pengguna. Pengguna akan merasa diarahkan dengan tepat ke film-film yang paling mungkin mereka nikmati, sehingga meningkatkan kepuasan dan loyalitas pelanggan terhadap _platform_ hiburan tersebut.
-
-Selain meningkatkan pengalaman pengguna, implementasi sistem rekomendasi film memberikan manfaat bisnis yang signifikan. Dengan menarik pengguna untuk terus menggunakan _platform_, retensi pelanggan meningkat, yang pada gilirannya berdampak positif pada pendapatan dan laba. Informasi yang dikumpulkan dari interaksi pengguna dengan sistem rekomendasi juga memberikan wawasan berharga tentang preferensi dan tren pasar yang dapat digunakan untuk mengoptimalkan strategi konten dan menghadirkan film-film yang diantisipasi oleh pengguna.
-
+# Sistem Rekomendasi Film
 ### _Problem Statment_
 1. Bagaimana meningkatkan akurasi dan efektivitas sistem rekomendasi film untuk memberikan rekomendasi yang lebih personal dan relevan bagi setiap pengguna dengan _content-based filtering_?
 2. Bagaimana meningkatkan pengalaman pengguna di platform hiburan dengan menyediakan rekomendasi film yang relevan dan sesuai dengan preferensi masing-masing pengguna dengan _collaborative filtering_?
@@ -29,37 +6,6 @@ Selain meningkatkan pengalaman pengguna, implementasi sistem rekomendasi film me
 ### _Goals_
 1. Menghasilkan rekomendasi film yang dipersonalisasi dan relevan untuk pengguna dengan teknik _content-based filtering_.
 2. Menghasilkan rekomendasi film yang sesuai dengan preferensi pengguna dan belum pernah ditonton sebelumnya dengan _collaborative filtering_.
-
-### _Solution Statement_
-Untuk mencapai goals yang telah ditetapkan, langkah-langkah yang dilakukan oleh penulis adalah sebagai berikut:
-
-1. Data Understanding
-
-Tahap ini melibatkan pemahaman mendalam tentang data yang ada. Data yang relevan untuk sistem rekomendasi film termasuk informasi tentang film-film yang tersedia, preferensi dan riwayat penonton, peringkat film, ulasan, dan interaksi pengguna sebelumnya dengan konten. Penulis menganalisis dan memahami struktur data ini untuk mempersiapkan langkah-langkah selanjutnya.
-
-2. _Univariate Exploratory Data Analysis_
-
-Tahap ini melibatkan analisis data secara individual untuk memahami distribusi, statistik, dan karakteristik dari setiap atribut data. Dengan melakukan analisis ini, penulis dapat mengidentifikasi potensi _outliers_, _missing_ _values_, atau kesalahan data lainnya yang perlu ditangani selama tahap _preprocessing_.
-
-3. _Data_ _Preprocessing_
-
-Langkah ini melibatkan pembersihan dan transformasi data agar dapat diolah dengan tepat oleh sistem rekomendasi. Hal ini mencakup penanganan _missing values_, normalisasi data, penghapusan duplikat, dan penyusunan ulang data agar sesuai dengan kebutuhan model.
-
-4. _Data_ _Preparation_
-
-Setelah data diproses, tahap ini melibatkan persiapan data yang akan digunakan untuk mengembangkan model rekomendasi. Data yang relevan dipisahkan menjadi data latih dan data uji untuk menguji dan mengevaluasi performa model.
-
-5. _Model_ _Development_ dengan _Content-Based Filtering_
-
-Dalam langkah ini, penulis mengembangkan model content-based filtering. Model ini menganalisis atribut-atribut film seperti genre, aktor, sutradara, dan plot untuk memberikan rekomendasi film yang mirip dengan film-film yang telah disukai oleh pengguna sebelumnya.
-
-6. _Model_ _Development_ dengan _Collaborative Filtering_
-
-Selain _content-based filtering_, penulis juga mengembangkan model _collaborative filtering_. Model ini menganalisis pola kesamaan antara pengguna untuk merekomendasikan film-film yang disukai oleh pengguna dengan preferensi serupa.
-
-7. Evaluasi dan Peningkatan Model
-
-Setelah mengembangkan kedua model, penulis melakukan evaluasi untuk mengukur kinerja mereka. Model tersebut diperbaiki dan dioptimalkan dengan mengadaptasi feedback dan rekomendasi dari pengguna untuk meningkatkan akurasi dan relevansi rekomendasi.
 
 ## _Data Understanding_
 Dataset yang digunakan dalam proyek ini merupakan data rekomendasi film. Dataset ini dapat diunduh di [Film Recomendation](https://www.kaggle.com/datasets/uttam94/recommendation). Pada dataset tersebut terdapat 2 file dengan format .csv yang terdiri dari movies.csv dan ratings.csv.
@@ -194,13 +140,6 @@ Tabel 3. Daftar Film Yang Tidak Mempunyai Genre
 Kemudian melakukan drop yang tidak memiliki genre dan hasilnya sebagai berikut:
 `jumlah movie tidak ada genre :  0`
 
-## _Modelling_
-Pada proyek ini, menggunakan penerapan 2 tipe model, yakni _Content Based Filtering_ dan _Collaborative Based Filtering_.
-
-![WhatsApp Image 2023-07-30 at 12 41 41](https://github.com/aldymuardi/Sistem-Rekomendasi-Film/assets/79571450/f49f2919-c76a-454a-973b-6e8875d023fb)
-
-Gambar 2. Sistem Rekomendasi _Content Based Filtering_ dan _Collaborative Filtering_
-
 ### _Content Based Filtering_
 Content-Based Filtering adalah metode dalam sistem rekomendasi yang menggunakan informasi konten atau fitur dari item (produk, film, lagu, dll.) dan preferensi pengguna untuk memberikan rekomendasi yang sesuai. Pendekatan ini mencocokkan preferensi pengguna dengan fitur-fitur item yang relevan.
 
@@ -280,16 +219,6 @@ Di mana:
 -   A dan B adalah dua vektor yang akan dibandingkan.
 -   A . B adalah hasil perkalian dot (inner product) antara vektor A dan B.
 -   ||A|| dan ||B|| adalah panjang (magnitude) dari vektor A dan B.
-
- <p align="center">
- <img src="https://images.deepai.org/glossary-terms/cosine-similarity-1007790.jpg" alt="Cosine Similarity Concept">
- </p>
-
-Gambar 3. _Consine Similarity_
-
-Untuk penerapan pada proyek ini, dapat menggunakan fungsi `cosine_similarity` dari _library sklearn_. Pada tahapan ini, akan dihitung menggunakan _cosine similarity_ pada data hasil _tf-idf_ sebelumnya. Sehingga hasil dari proses ini dapat dilihat di tabel sampel berikut ini.
-
-Tabel 5. Menghitung Hasil TF-IDF Menggunakan Funsi _Consine Similarity_
 
 **title**|**Duck, You Sucker (1971)**|**Every Secret Thing (2014)**|**Two Women (Ciociara, La) (1960)**|**Happy Feet Two (2011)**|**Liberal Arts (2012)**|**Two Brothers (Deux frères) (2004)**|**Great Ziegfeld, The (1936)**|**War and Peace (2016)**|**Stuck on You (2003)**|**Iron Man 3 (2013)**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:										
@@ -475,25 +404,3 @@ Di sini:
 - n adalah jumlah data pengujian.
 - yi adalah nilai sebenarnya.
 - ŷi adalah nilai prediksi.
-
-* Visualisasi Metrik
-
-![image](https://github.com/aldymuardi/Sistem-Rekomendasi-Film/assets/79571450/b1a18d9a-930d-4248-abdf-6181303f834e)
-
-Gambar 4. Hasil Visualisasi Metrik
-
-
-Dari hasil RMSE tersebut, dapat dilihat bahwa baik pada data pelatihan maupun data validasi, RMSE mengalami penurunan setiap epoch. Hal ini menunjukkan bahwa model semakin mempelajari pola dalam data dan semakin baik dalam memprediksi nilai target.
-
-Selain itu, RMSE pada data validasi juga memberikan gambaran tentang performa model pada data yang tidak digunakan dalam proses pelatihan. Jika RMSE pada data validasi tetap rendah dan mendekati RMSE pada data pelatihan, maka model memiliki kemampuan umum dalam memprediksi rating tanpa overfitting pada data pelatihan.
-
-## Kesimpulan
-
-Pada solusi _Content Based Filtering_, solusi ini menghasilkan rekomendasi yang sangat sesuai dengan sampel movie yang diberikan berdasarkan fitur genre movie. Metrik yang digunakan untuk mengukur evaluasi _Content Based Filtering_ adalah _Precision_. nilai precision didapat dari jumlah item yang relevan dibagi dengan jumlah item yang direkomendasikan. Nilai precision dari solusi rekomendasi ini sebesar 100%. Dalam hal ini, sistem rekomendasi memiliki presisi yang tinggi, menunjukkan bahwa sistem tersebut dapat menghasilkan rekomendasi yang sesuai dengan preferensi genre pengguna.
-
-Pada solusi _Collaborative Filtering_, solusi ini menghasilkan rekomendasi yang relevan terhadap rating user dan genre. Rekomendasi movie yang diberikan memiliki genre yang sama paling tidak satu genre yang sama. Berdasarkan hasil visualisasi metrik, proses training model cukup smooth dan model konvergen pada epochs sekitar 4. Dari proses ini, penulis memperoleh nilai error (RSME) akhir sebesar sekitar 0.20 dan error pada data validasi sebesar 0.20. Nilai tersebut cukup bagus untuk sistem rekomendasi.
-
-## Referensi
-[1] Kristianto, W., Herwindiati, D. E., &amp; Hendryli, J. (2021). Sistem Rekomendasi drama Korea menggunakan metode user-based collaborative filtering. Jurnal Ilmu Komputer Dan Sistem Informasi, 9(1), 252. https://doi.org/10.24912/jiksi.v9i1.12668 
-
-[2] Ritdrix, A. H., &amp; Wirawan, P. W. (2018). Sistem Rekomendasi Buku Menggunakan metode item-based collaborative filtering. JURNAL MASYARAKAT INFORMATIKA, 9(2), 24–32. https://doi.org/10.14710/jmasif.9.2.31482 
