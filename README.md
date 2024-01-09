@@ -165,21 +165,8 @@ _Term Frequency-Inverse Document Frequency_ (TF-IDF) _Vectorizer_ adalah sebuah 
 
 Pada dasarnya, TF-IDF _Vectorizer_ mengukur pentingnya suatu kata dalam suatu dokumen berdasarkan frekuensi kemunculan kata dokumen tersebut (TF) dan keberulangan kata di seluruh dokumen dalam korpus (IDF).
 
-Rumus umum untuk menghitung nilai TF-IDF adalah sebagai berikut:
-
-$$TF-IDF(d, t) = TF(d, t) * IDF(t)$$
-
-Di mana:
-
 * TF(d, t) adalah frekuensi kemunculan kata (_term_) t dalam dokumen d. Frekuensi ini dapat dihitung dengan berbagai metode, misalnya menggunakan skema biner (jika kata ada dalam dokumen, nilai TF = 1) atau menggunakan frekuensi relatif (jumlah kemunculan kata dibagi dengan total kata dalam dokumen).
 * IDF(t) adalah _inverse document frequency_ (kebalikan frekuensi dokumen) dari kata t. IDF mengukur sejauh mana kata t umum atau langka di seluruh dokumen dalam korpus. IDF dihitung sebagai logaritma dari jumlah total dokumen dalam korpus dibagi dengan jumlah dokumen yang mengandung kata t.
-
-Untuk rumus TF adalah sebagai berikut
-$$TF(d, t) = \dfrac{f_d(t)}{maxf_d(w)}$$
-
-- $f_d(t)$ merupakan frekuensi kemunculan kata $t$ dalam dokumen $d$
-- $maxf_d(w)$ merupakan jumlah kata dalam dokumen $d$
-
 
 Pada bagian ini, _TF-IDF_ akan diterapkan untuk kolom genre. Langkah yang dilakukan untuk menerapkan Pada tahapan ini, _tokenizer_ yang akan digunakan adalah dengan _split_ pada data kolom tersebut. Hal ini digunakan agar data genre akan diproses dalam keadaan utuh, seperti pada suatu film dengan Genre _"Action, Sci-Fi, Drama"_, maka setelah dilakukan _vectonizer_ menjadi `['action', 'sci-fi', 'drama']`. Setelah itu lakukan perhitungan _IDF_ pada data genre. Kemudian jika di-_mapping_, maka hasilnya akan sebagai berikut.
 
@@ -394,13 +381,3 @@ Untuk mengevaluasi model yang telah dilatih, proyek ini menggunakan metrik _root
 * Metrik Root Mean Squared Error (RMSE)
 
 _Root Mean Squared Error_ (RMSE) adalah metrik evaluasi yang umum digunakan dalam sistem rekomendasi untuk mengukur sejauh mana prediksi rekomendasi yang dibuat oleh sistem mendekati nilai yang sebenarnya atau preferensi pengguna. RMSE menghitung perbedaan antara nilai prediksi dan nilai sebenarnya dari set data pengujian.
-
-Rumus RMSE adalah sebagai berikut:
-
-`RMSE = sqrt((1/n) * Σ(yi - ŷi)^2)`
-
-Di sini:
-
-- n adalah jumlah data pengujian.
-- yi adalah nilai sebenarnya.
-- ŷi adalah nilai prediksi.
